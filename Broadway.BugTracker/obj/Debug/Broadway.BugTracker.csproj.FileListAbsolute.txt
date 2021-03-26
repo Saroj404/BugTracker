@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\Broadway.BugTracker.exe.config
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\Broadway.BugTracker.exe
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\Broadway.BugTracker.pdb
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\EntityFramework.dll
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\EntityFramework.xml
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.Properties.Resources.resources
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.csproj.CopyComplete
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.exe
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.pdb
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.Login.resources
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.MainForm.resources
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.Dashboard.resources
