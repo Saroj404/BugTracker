@@ -116,5 +116,10 @@ namespace Broadway.BugTracker
         {
 
         }
+
+        private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -42,5 +42,10 @@ namespace Broadway.BugTracker.Service
             }
 
         }
+        public List<User>GetAll()
+        {
+            return db.User.ToList();
+
+        }
     }
 }

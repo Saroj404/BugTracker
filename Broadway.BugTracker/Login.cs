@@ -42,9 +42,11 @@ namespace Broadway.BugTracker
             var loginResult = login.Login(loginmodel);
             if(loginResult.Item1)
             {
-                MainForm main = new MainForm();
+                //MainForm main = new MainForm();
+                Dashboard dash = new Dashboard();
                 this.Hide();
-                main.Show();
+                dash.Show();
+                //main.Show();
             }
             else
             {

@@ -15,6 +15,7 @@ namespace Broadway.BugTracker
     public partial class Dashboard : Form
     {
         private WorkItemservice workItemservice = new WorkItemservice();
+        private LoginService loginService = new LoginService();
         public Dashboard()
         {
             InitializeComponent();
@@ -25,10 +26,21 @@ namespace Broadway.BugTracker
             Refreshworkitems();
         }
 
+        void PopulateComboBox()
+        {
+            //comboBox1.Items = loginService.GetAll().
+        }
+
         void Refreshworkitems()
         {
             dataGridView1.DataSource = workItemservice.GetAll();
             dataGridView1.Refresh();
+        }
+
+        void ResetForm()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,8 +55,7 @@ namespace Broadway.BugTracker
             if(result.Item1)
             {
                 Refreshworkitems();
-                textBox1.Text = "";
-                textBox2.Text = "";
+                ResetForm();
                 //comboBox1.SelectedIndex = 0;
             }
             else
@@ -52,6 +63,11 @@ namespace Broadway.BugTracker
                 MessageBox.Show(result.Item2);
             }
                        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ResetForm();
         }
     }
 }
