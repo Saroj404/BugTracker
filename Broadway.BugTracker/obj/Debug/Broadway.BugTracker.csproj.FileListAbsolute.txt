@@ -15,3 +15,5 @@ C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Bro
 C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.Login.resources
 C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.MainForm.resources
 C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.Dashboard.resources
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.EntryForm.resources
+C:\Users\user\source\repos\Broadway.BugTracker\Broadway.BugTracker\obj\Debug\Broadway.BugTracker.UserControls.CustomTextBox.resources

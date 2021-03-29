@@ -1,4 +1,5 @@
 ﻿using Broadway.BugTracker.Model;
+using Broadway.BugTracker.VIewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,9 +27,18 @@ namespace Broadway.BugTracker.Service
             }
         }
 
-        public List<WorkItems>GetAll()
+        public List<WorkItemViewModel>GetAll()
         {
-            return db.WorkItem.ToList();
+            var workitems = db.WorkItem.ToList();
+           var listworkitems=workitems.Select(p => new WorkItemViewModel
+            {
+                id=p.id,
+                Title=p.Title,
+                AssigneeName=p.Assignee==null?"":p.Assignee.Username,
+                ReporterName=p.Reporter==null?"":p.Reporter.Username,
+            }).ToList();
+
+            return listworkitems;
         }
         public WorkItems Getbyid(int id)
         {
