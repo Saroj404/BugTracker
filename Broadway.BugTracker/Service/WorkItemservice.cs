@@ -36,6 +36,7 @@ namespace Broadway.BugTracker.Service
                 Title=p.Title,
                 AssigneeName=p.Assignee==null?"":p.Assignee.Username,
                 ReporterName=p.Reporter==null?"":p.Reporter.Username,
+                Status=p.Status
             }).ToList();
 
             return listworkitems;
@@ -43,6 +44,30 @@ namespace Broadway.BugTracker.Service
         public WorkItems Getbyid(int id)
         {
             return db.WorkItem.Find(id);
+        }
+
+        public (bool,string) ChangestateofWorkItem(int id ,WorkItemStatus status)
+        {
+            try
+            {
+                var item = db.WorkItem.Find(id);
+                if(item==null)
+                {
+                    return (false, "Item not found");
+                }
+                else
+                {
+                    item.Status = status;
+                    db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    return (true, "Item updated");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return (false, ex.Message);
+            }
         }
 
     }

@@ -33,8 +33,24 @@ namespace Broadway.BugTracker
 
         void Refreshworkitems()
         {
-            dataGridView1.DataSource = workItemservice.GetAll();
-            dataGridView1.Refresh();
+            //dataGridView1.DataSource = workItemservice.GetAll();
+            //dataGridView1.Refresh();
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            listBox3.Items.Clear();
+
+            var data = workItemservice.GetAll();
+            var todoitem = data.Where(p => p.Status == WorkItemStatus.ToDo).ToArray();
+            var Inprogressitem = data.Where(p => p.Status == WorkItemStatus.InProgress).ToArray();
+            var doneitem = data.Where(p => p.Status == WorkItemStatus.Done).ToArray();
+
+            listBox1.Items.AddRange(todoitem);
+            listBox2.Items.AddRange(Inprogressitem);
+            listBox3.Items.AddRange(doneitem);
+
+            listBox1.Refresh();
+            listBox2.Refresh();
+            listBox3.Refresh();
         }
 
         void ResetForm()
@@ -68,6 +84,107 @@ namespace Broadway.BugTracker
         private void button2_Click(object sender, EventArgs e)
         {
             ResetForm();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var item = listBox1.SelectedItem;
+            if(item!=null)
+            {
+
+            var itemArray = item.ToString().Split(':');
+            var id = Convert.ToInt32(itemArray[0]);
+            workItemservice.ChangestateofWorkItem(id, WorkItemStatus.InProgress);
+            Refreshworkitems(); 
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var item = listBox2.SelectedItem;
+            if (item != null)
+            {
+
+                var itemArray = item.ToString().Split(':');
+                var id = Convert.ToInt32(itemArray[0]);
+                workItemservice.ChangestateofWorkItem(id, WorkItemStatus.ToDo);
+                Refreshworkitems();
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var item = listBox2.SelectedItem;
+            if (item != null)
+            {
+
+                var itemArray = item.ToString().Split(':');
+                var id = Convert.ToInt32(itemArray[0]);
+                workItemservice.ChangestateofWorkItem(id, WorkItemStatus.Done);
+                Refreshworkitems();
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var item = listBox3.SelectedItem;
+            if (item != null)
+            {
+
+                var itemArray = item.ToString().Split(':');
+                var id = Convert.ToInt32(itemArray[0]);
+                workItemservice.ChangestateofWorkItem(id, WorkItemStatus.InProgress);
+                Refreshworkitems();
+
+            }
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            var item = listBox1.SelectedItem;
+            if (item != null)
+            {
+
+                var itemArray = item.ToString().Split(':');
+                var id = Convert.ToInt32(itemArray[0]);
+                var workitem = workItemservice.Getbyid(id);
+                textBox1.Text = workitem.Title;
+                textBox2.Text = workitem.Description;
+
+            }
+        }
+
+        private void listBox2_DoubleClick(object sender, EventArgs e)
+        {
+            var item = listBox2.SelectedItem;
+            if (item != null)
+            {
+
+                var itemArray = item.ToString().Split(':');
+                var id = Convert.ToInt32(itemArray[0]);
+                var workitem = workItemservice.Getbyid(id);
+                textBox1.Text = workitem.Title;
+                textBox2.Text = workitem.Description;
+
+            }
+        }
+
+        private void listBox3_DoubleClick(object sender, EventArgs e)
+        {
+            var item = listBox3.SelectedItem;
+            if (item != null)
+            {
+
+                var itemArray = item.ToString().Split(':');
+                var id = Convert.ToInt32(itemArray[0]);
+                var workitem = workItemservice.Getbyid(id);
+                textBox1.Text = workitem.Title;
+                textBox2.Text = workitem.Description;
+
+            }
         }
     }
 }

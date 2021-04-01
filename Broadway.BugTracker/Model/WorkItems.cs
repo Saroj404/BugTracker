@@ -16,10 +16,19 @@ namespace Broadway.BugTracker.Model
         public int? ReporterId { get; set; }
 
         [ForeignKey("AssigneeId")]
-        public virtual User Assignee{get;set;}
+        public virtual User Assignee { get; set; }
         [ForeignKey("ReporterId")]
         public virtual User Reporter { get; set; }
 
+        public WorkItemStatus Status {get;set;}
+
 
     }
+    public enum WorkItemStatus
+    {
+        ToDo=0,
+        InProgress=1,
+        Done=2
+    }
+
 }
